@@ -1,0 +1,51 @@
+#work {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white-color;
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  #time-check {
+    border: 2px solid $white-color;
+    box-shadow: 0 0 4px $green-color;
+    width: 80%;
+    height:15rem;
+    display: flex;
+    flex-direction: column;
+
+    .list {
+      overflow: scroll;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .item {
+        display: flex;
+        padding: 4%;
+        justify-content: space-between;
+        color: $green-color;
+        font-weight: bold;
+        width: 100%;
+        border: none;
+        background-color: $black-color;
+        cursor: pointer;
+      }
+    }
+
+    .button-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      height: 2rem;
+      padding: 2% 5%;
+      color: $white-color;
+
+    }
+  }
+}
+

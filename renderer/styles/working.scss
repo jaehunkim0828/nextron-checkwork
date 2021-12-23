@@ -1,0 +1,34 @@
+#working {
+  width: 50%;
+  color: $white-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .timer-container {
+    width: 80%;
+    height: 15rem;
+    border: 2px solid $white-color;
+    box-shadow: 0 0 4px $green-color;
+    display: flex;
+
+    .timer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      padding: 10% 0;
+
+      .time {
+        font-size: 3rem;
+        color: #FF5959;
+      }
+      
+    }
+  }
+}

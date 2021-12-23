@@ -1,0 +1,29 @@
+#main-container {
+  border: 1px solid $white-color;
+  height: 90vh;
+  margin: 0 10%;
+  width: 95%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px $green-color;
+  display: flex;
+  flex-direction: column;
+  .part1 {
+    display: flex;
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex: 1;
+      padding: 0 0 2rem 0;
+    }
+  }
+}
+
+#nav {
+  display: flex;
+  padding: 2% 3%;
+  color: $blue-color;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: bold;
+}
