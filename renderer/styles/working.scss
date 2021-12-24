@@ -26,9 +26,19 @@
 
       .time {
         font-size: 3rem;
-        color: #FF5959;
+        color: $red-color;
       }
-      
+    }
+
+    .normal {
+      color: $green-color;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      height: 15rem;
+      align-items: center;
+      font-size: 3rem;
+      font-weight: bold;
     }
   }
 }

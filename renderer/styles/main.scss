@@ -7,10 +7,12 @@
   box-shadow: 0 0 10px $green-color;
   display: flex;
   flex-direction: column;
-  .part1 {
+  .content {
     display: flex;
+    flex-direction: column;
+    flex: 1;
 
-    .content {
+    .part1 {
       width: 100%;
       display: flex;
       flex: 1;
