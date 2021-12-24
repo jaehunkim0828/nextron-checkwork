@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Nav from '../molecules/Nav';
+import Note from '../molecules/Note';
 import Work from '../molecules/Work';
 import Working from '../molecules/Working';
 
@@ -13,6 +14,7 @@ function Main() {
           <Work />
           <Working />
         </div>
+        <Note />
       </div>
     </div>
   )
