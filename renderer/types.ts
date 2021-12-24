@@ -5,3 +5,5 @@ export type InputT = { value: string, onChange: any, placeholder: string, style:
 export type TimerT = 'Start' | 'Stop';
 
 export type TimeT = NodeJS.Timeout | undefined;
+
+export type ListT = { list: string[] };
