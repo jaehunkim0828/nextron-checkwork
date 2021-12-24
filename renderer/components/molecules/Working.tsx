@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
+import { RootState } from '../../store/reducers/index';
 import Timer from './Timer';
 
 function Working() {
+  const { item } = useSelector((state: RootState) => state.currentItem);
+
   return (
     <div id='working'>
-      <h1>Working</h1>
+      {item === 'normal' ? <h2>Working</h2> : <h2>{item}</h2>}
       <div className='timer-container'>
-        <Timer />
+        { item !== 'normal' ? <Timer current={item}/> : <div className='normal'>StopWatch</div>}
       </div>
     </div>
   )

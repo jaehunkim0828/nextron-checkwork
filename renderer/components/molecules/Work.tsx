@@ -5,7 +5,7 @@ import TimeCheck from './TimeCheck';
 function Work() {
   return (
     <div id='work'>
-      <h1>Work</h1>
+      <h2>Work</h2>
       <TimeCheck/>
     </div>
   )
