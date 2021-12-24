@@ -1,12 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
+
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { theme } from '../lib/theme';
 import type { AppProps } from 'next/app';
 import '../styles/app.scss';
+import { wrapper } from '../store';
 
-export default function(props: AppProps) {
+const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props;
 
   React.useEffect(() => {
@@ -28,3 +30,5 @@ export default function(props: AppProps) {
     </React.Fragment>
   );
 }
+
+export default wrapper.withRedux(MyApp);
