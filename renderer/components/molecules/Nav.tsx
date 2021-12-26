@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TotalTime from '../atoms/TotalTime';
+
 
 function Nav() {
   const getDate = () => {
@@ -15,7 +17,10 @@ function Nav() {
   return (
     <nav id='nav'>
       <div>{getDate()}</div>
-      <div>{getDay()}</div>
+      <div>
+        <TotalTime />
+        <div>{getDay()}</div>
+      </div>
     </nav>
   )
 }

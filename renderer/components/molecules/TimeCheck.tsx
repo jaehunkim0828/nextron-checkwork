@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Button from '../atoms/Button';
 import Input from '../atoms/Input';
@@ -19,6 +19,7 @@ function TimeCheck() {
     setListV('');
     setList([...list, listV]);
   }
+  useEffect(() => sessionStorage.setItem('lists', JSON.stringify(list)), [list]);
 
   const inputStyle = { flex: '1'};
   const buttonStyle= {margin: '0 0 0 0.5rem', width: '3rem', height: '1.5rem'};
