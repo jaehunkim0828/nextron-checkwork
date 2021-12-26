@@ -12,8 +12,6 @@ function List({ list }: ListT) {
   const [rerender, setRerender] = useState(true);
   const dispatch = useDispatch();
   const showStopwatch = (todo: string, ourS: number, minS: number, secS: number) => {
-    //show the working stopwatch
-    sessionStorage.setItem('isList', 'yes');
     //ask having a list name
     dispatch(changeItem(todo, [ourS, minS, secS]));
   };
