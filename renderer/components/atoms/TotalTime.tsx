@@ -11,6 +11,12 @@ function TotalTime() {
   const [sec, setsec] = useState(0);
   
   const getTotal = () => {
+    sessionStorage.setItem('currentOur', '0');
+    sessionStorage.setItem('currentMin', '0');
+    sessionStorage.setItem('currentSec', '0');
+    const ourC = +sessionStorage.getItem('currentOur');
+    const minC = +sessionStorage.getItem('currentMin');
+    const secC = +sessionStorage.getItem('currentSec');
     const list = sessionStorage.getItem('lists');
     const arr: string[] = JSON.parse(list);
     let localOur: number = 0;
@@ -18,18 +24,29 @@ function TotalTime() {
     let localSec: number = 0;
     for (let i = 0; i < arr.length; i += 1) {
       const itemTime = JSON.parse(sessionStorage.getItem(arr[i]));
-      let ourS = itemTime.our * 1 + our;
-      let minS = itemTime.min * 1 + min;
-      let secS = itemTime.sec * 1 + sec;
+      let ourS = itemTime.our * 1 + ourC;
+      let minS = itemTime.min * 1 + minC;
+      let secS = itemTime.sec * 1 + secC;
       localOur += ourS;
       localMin += minS;
       localSec += secS;
     }
-    console.log(localOur,localMin , localSec)
     setour(localOur);
     setmin(localMin);
     setsec(localSec);
+    sessionStorage.setItem('currentOur', localOur + '');
+    sessionStorage.setItem('currentMin', localMin + '');
+    sessionStorage.setItem('currentSec', localSec + '');
   };
+
+  const getCurrent = () => {
+    const ourC = +sessionStorage.getItem('currentOur');
+    const minC = +sessionStorage.getItem('currentMin');
+    const secC = +sessionStorage.getItem('currentSec');
+    setour(ourC);
+    setmin(minC);
+    setsec(secC);
+  }
 
   useEffect(() => {
     if (sec > 59) {
@@ -47,8 +64,15 @@ function TotalTime() {
   }, [sec])
 
   useEffect(() => {
+    getCurrent();
     if (bool === false) {
       getTotal();
+    }
+
+    return () => {
+      setour(0);
+      setmin(0);
+      setsec(0);
     }
   }, [bool])
 
