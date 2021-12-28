@@ -17,7 +17,7 @@ function Nav() {
   return (
     <nav id='nav'>
       <div>{getDate()}</div>
-      <div>
+      <div className='time-day'>
         <TotalTime />
         <div>{getDay()}</div>
       </div>

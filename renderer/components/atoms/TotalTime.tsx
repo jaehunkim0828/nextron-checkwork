@@ -77,7 +77,9 @@ function TotalTime() {
   }, [bool])
 
   return (
-    <div>{`${our} : ${min} : ${sec}`}</div>
+    <div className='total-time'>{
+      `${our} : ${min < 9 ? '0' + +min : min} : ${sec < 9 ? '0' + +sec : sec}`
+      }</div>
   )
 };
 
