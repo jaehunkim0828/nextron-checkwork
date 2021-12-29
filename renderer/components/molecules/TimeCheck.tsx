@@ -27,7 +27,7 @@ function TimeCheck() {
   return (
     <div id='time-check'>
       <div className='list'>
-        <List list={list}/>
+        <List list={list} setList={setList}/>
       </div>
       <form className='button-container' onSubmit={onSubmit}>
         <Input value={listV} onChange={onChange} placeholder='할일을 적어주세요...' style={inputStyle}/>
