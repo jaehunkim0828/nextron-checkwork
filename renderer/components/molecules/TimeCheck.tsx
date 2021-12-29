@@ -20,6 +20,7 @@ function TimeCheck() {
     setList([...list, listV]);
   }
   useEffect(() => sessionStorage.setItem('lists', JSON.stringify(list)), [list]);
+  
 
   const inputStyle = { flex: '1'};
   const buttonStyle= {margin: '0 0 0 0.5rem', width: '3rem', height: '1.5rem'};
