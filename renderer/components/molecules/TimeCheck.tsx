@@ -16,6 +16,12 @@ function TimeCheck() {
   
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    for (let i = 0; i < list.length; i += 1) {
+      if (list[i] === listV) {
+        window.alert('이미 존재합니다');
+        return;
+      }
+    }
     setListV('');
     setList([...list, listV]);
   }

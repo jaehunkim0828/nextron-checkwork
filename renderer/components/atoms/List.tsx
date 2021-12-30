@@ -39,7 +39,6 @@ function List({ list, setList }: ListT) {
 
   useEffect(() => {
     setRerender(true);
-    console.log('hello');
     sessionStorage.setItem('lists', JSON.stringify(list));
     if (list.length <= 0) {
       setRerender(false);
@@ -64,7 +63,13 @@ function List({ list, setList }: ListT) {
           return <button 
             className='item'
             onClick={() => showStopwatch(todo,ourN, minN, secN)}
-            onDoubleClick={() => deleteList(todo)}
+            onDoubleClick={() => {
+              const isDelete = window.confirm('삭제하시겠습니까?');
+              if (isDelete) {
+                deleteList(todo);
+                dispatch(changeItem('normal', [0, 0, 0]));
+              }
+            }}
           >
             <div>{todo}</div>
             <div>{`${process(ourN)} : ${process(minN)} : ${process(secN)}`}</div>
