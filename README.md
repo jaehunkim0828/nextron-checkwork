@@ -1,38 +1,26 @@
-<p align="center"><img src="https://i.imgur.com/flcMvDC.png"></p>
+# checkwork
 
-## Usage
+## Main
+<img width="788" alt="스크린샷 2022-02-21 오후 4 12 17" src="https://user-images.githubusercontent.com/98702217/154906157-827bcade-04c4-40ca-97e1-75fcfb2a7a3e.png">
 
-### Create an App
+How to start
 
+1. git clone
 ```
-# with npx
-$ npx create-nextron-app my-app --example with-typescript-material-ui
-
-# with yarn
-$ yarn create nextron-app my-app --example with-typescript-material-ui
-
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-typescript-material-ui
+$ git clone https://github.com/jaehunkim0828/nextron-checkwork.git
+cd nextron-checkwork
 ```
 
-### Install Dependencies
-
+2. npm i or yarn
+  -  설정해 놓은 세팅을 다운 받습니다.
 ```
-$ cd my-app
-
-# using yarn or npm
-$ yarn (or `npm install`)
-
-# using pnpm
-$ pnpm install --shamefully-hoist
+$ npm i 
+$ yarn 
 ```
 
-### Use it
-
+3. build
+ - package.json 참고
 ```
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
-
-# production build
-$ yarn build (or `npm run build` or `pnpm run build`)
+$ npm run build:mac
 ```
+4. dist 파일에서 프로젝트 찾아서 사용하기.
